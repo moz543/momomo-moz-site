@@ -31,3 +31,7 @@ pnpm-debug.log*
 # Sensitive originals (NAS から持ってきた未公開素材を誤ってコミットしないため)
 private/
 drafts/
+
+# Phase 3 (初回 GitHub Pages デプロイ) では CNAME を含めないでテストする
+# Phase 6 (独自ドメイン接続) で下の行を削除して CNAME を commit する
+public/CNAME
