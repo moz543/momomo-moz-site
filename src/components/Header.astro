@@ -1,0 +1,23 @@
+---
+const base = import.meta.env.BASE_URL;
+const link = (path: string) => {
+  const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
+  return `${trimmedBase}${path}`;
+};
+const navItems = [
+  { href: link('/'), label: 'Works' },
+  { href: link('/about'), label: 'About' },
+];
+---
+<header class="border-b" style="border-color: var(--border)">
+  <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-5 sm:px-6">
+    <a href={link('/')} class="text-base font-medium tracking-tight">moz</a>
+    <nav>
+      <ul class="flex gap-6 text-sm">
+        {navItems.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,11 @@
+Phase 6 (独自ドメイン接続) のときに使う CNAME ファイル。
+
+DNS の A/CNAME レコードがさくら側で反映されたあと、以下を実行:
+
+  cp docs/PHASE6-CNAME.txt public/CNAME
+  # または public/CNAME を新規作成し、中身を 1 行 "momomo-moz.com" にする
+
+その後 commit & push すると GitHub Pages が momomo-moz.com で公開される。
+
+────── public/CNAME に書く内容 (この行より下を public/CNAME に貼り付け) ──────
+momomo-moz.com

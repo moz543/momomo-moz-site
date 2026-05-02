@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://momomo-moz.com/sitemap-index.xml

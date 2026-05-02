@@ -1,0 +1,37 @@
+---
+title: サンプル作品
+date: 2025-04-30
+summary: 作品ページ構造の確認用ダミー。これを削除して実作品で置き換える。
+cover: ../../assets/works/2025-04-sample-work/cover.jpg
+tags: ["sample", "test"]
+medium: photo
+links:
+  - label: GitHub リポジトリ
+    url: https://github.com/moz543/momomo-moz-site
+    kind: github
+draft: false
+---
+
+import { Image } from 'astro:assets';
+import VideoEmbed from '../../components/VideoEmbed.astro';
+import cover from '../../assets/works/2025-04-sample-work/cover.jpg';
+
+これはサンプルです。本番では実作品の説明をここに書く。
+
+Markdown が使えるので、**強調**、*斜体*、[リンク](https://example.com) 等が普通に書ける。
+
+## 画像を入れる
+
+```mdx
+import myImage from '../../assets/works/<your-work>/01.jpg';
+
+<Image src={myImage} alt="説明" />
+```
+
+## YouTube / Vimeo を埋め込む
+
+```mdx
+<VideoEmbed provider="youtube" id="dQw4w9WgXcQ" />
+```
+
+frontmatter に `video` を書いておけば、ヘッダ画像の代わりに動画が出る。
